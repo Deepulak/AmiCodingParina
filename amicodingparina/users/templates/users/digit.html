@@ -1,0 +1,22 @@
+
+{% block content %}
+
+
+<center>
+	<h1>Add Digit To Database</h1>
+<br/><br/>
+{% if user.is_authenticated %}
+<form action="" method="POST">
+	{% csrf_token %}
+	<input class="form-control me-2" type="input" placeholder="Enter Digit" aria-label="input" name="digit">
+    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+</form>
+{% else %}
+<h1>Please SignIn to Continue</h1>
+
+</center>
+
+{% endif %}
+
+
+{% endblock %}
